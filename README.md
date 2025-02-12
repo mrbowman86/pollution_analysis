@@ -1,95 +1,136 @@
-# Global Air Pollution Analysis
+# Global Air Pollution Analysis: Population vs. Pollution
 
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Dataset and Sources](#dataset-and-sources)
-   - [Data Collection](#data-collection)
-   - [Key Pollutants Analyzed](#key-pollutants-analyzed)
-   - [Data Cleaning and Processing](#data-cleaning-and-processing)
-3. [Analysis and Findings](#analysis-and-findings)
-   - [Pollution Levels vs. Population](#pollution-levels-vs-population)
-   - [Top 10 Most Polluted Cities](#top-10-most-polluted-cities-by-pollutant)
-   - [Top 1000 Most Polluted Cities - Global Heatmap](#top-1000-most-polluted-cities---global-heatmap)
-   - [Pollutant Correlation Analysis](#pollutant-correlation-analysis)
-4. [Visualizations](#visualizations)
-5. [Conclusion](#conclusion)
-6. [Repository and Presentation](#repository-and-presentation)
-7. [Project Contributors](#project-contributors)
-8. [Resources](#resources)
+## 📌 Table of Contents
+- [Project Overview](#project-overview)
+- [Data Sources](#data-sources)
+- [Pollutants Analyzed](#pollutants-analyzed)
+- [Data Cleaning & Processing](#data-cleaning--processing)
+- [Visualizations](#visualizations)
+- [Correlation Analysis](#correlation-analysis)
+- [Conclusions](#conclusions)
+- [Tools & Technologies Used](#tools--technologies-used)
+- [Team Members](#team-members)
 
-## Project Overview
-This project investigates the relationship between air pollution and population density across the world's most populated cities. Using real-world air quality data, we analyzed key pollutants and assessed their correlation with urban population levels. Our research aims to determine whether higher population density directly translates to higher pollution levels or if other factors play a more significant role.
+---
 
-## Dataset and Sources
-### Data Collection
-- **City Population Data:** Top 1,000 most populated cities worldwide.
-- **Air Quality Data:** Retrieved from the OpenWeather API, specifically using the One Call API 3.0, which provides real-time and historical pollution data.
-- **Geographical Data:** Used latitude and longitude for precise pollution mapping.
+<a id="project-overview"></a>
+## 📖 Project Overview
+This project examines the relationship between population density and pollution levels across the world's 1,000 most populated cities. Using data from the OpenWeather API and population datasets from Kaggle, we analyzed six major air pollutants to determine if a direct correlation exists between city population and pollution levels. 
 
-### Key Pollutants Analyzed
-- **Sulfur Dioxide (SO2):** Emissions from fossil fuel burning and industrial activities.
-- **Nitrogen Dioxide (NO2):** Emissions from vehicles and power plants.
-- **Particulate Matter (PM10, PM2.5):** Airborne particles from dust, industrial emissions, and combustion.
-- **Ozone (O3):** A secondary pollutant formed from NO2 and volatile organic compounds.
-- **Carbon Monoxide (CO):** Resulting from incomplete combustion of fuels.
+![Project Overview](https://your-repo.com/images/project_overview.png)
 
-### Data Cleaning and Processing
-- Renamed columns for consistency.
-- Handled missing values to ensure dataset integrity.
-- Aggregated pollution metrics to compare across cities effectively.
-- Used statistical analysis to identify anomalies in pollution data.
+---
 
-## Analysis and Findings
+<a id="data-sources"></a>
+## 📊 Data Sources
+- **OpenWeather API** - Used to obtain real-time air pollution data
+- **Kaggle City Population Dataset** - Provided population figures for global cities
+- **Scientific Literature & Reports** - Referenced to understand the effects of pollutants
 
-### 1. Pollution Levels vs. Population
-- **Expectation:** A strong positive correlation between population and pollution levels.
-- **Finding:** Surprisingly, our analysis showed a weak correlation between population size and pollution concentration.
-- **Conclusion:** Pollution levels are influenced by regional factors such as industrial activity, fuel consumption, and environmental policies rather than just population size alone.
+![Data Sources](https://your-repo.com/images/data_sources.png)
 
-### 2. Top 10 Most Polluted Cities (by Pollutant)
-- The cities with the highest levels of SO2, NO2, PM10, and PM2.5 were mainly in industrial regions of China and India.
-- This aligns with expectations, as these regions have high manufacturing activity and loose pollution regulations.
+---
 
-### 3. Top 1000 Most Polluted Cities - Global Heatmap
-- A heatmap visualization provided insight into regional pollution trends:
-  - **South Asia (India, Pakistan, Bangladesh):** High PM2.5, CO, and NO2 levels.
-  - **Southeast Asia (Indonesia, Vietnam):** Pollution rising due to industrialization.
-  - **Africa (Nigeria):** Increasing pollution due to urban growth without strict regulations.
-  - **Europe and North America:** Generally lower pollution levels but occasional high pollution spikes in urban centers.
+<a id="pollutants-analyzed"></a>
+## ☣️ Pollutants Analyzed
+The study focused on the following six pollutants:
 
-### 4. Pollutant Correlation Analysis
-- We generated a correlation matrix for the pollutants:
-  - PM10 and PM2.5 had the strongest correlation (~0.9), as expected.
-  - Other pollutants showed moderate correlations, likely due to shared sources.
-  - CO showed weaker correlation patterns, indicating different emission sources.
+![Pollutants Analyzed](https://your-repo.com/images/pollutants.png)
 
-## Visualizations
-We developed several visualizations to support our findings, including:
-1. **Scatter plots:** Displaying pollution levels against population density.
-2. **Bar charts:** Comparing pollution levels across different cities.
-3. **Heatmaps:** Showing global pollution distribution patterns.
-4. **Correlation matrices:** Analyzing the relationships between pollutants.
-5. **Top 10 polluted cities:** Highlighting the worst-affected regions.
-6. **Top 100 pollution heatmaps:** Providing regional insights into pollution intensity.
-7. **Time series graphs:** Examining pollution trends over time for selected cities.
-8. **Comparative analysis charts:** Contrasting industrial vs. non-industrial cities.
+1. **Sulfur Dioxide (SO₂)** – From fossil fuel combustion, causes respiratory issues and acid rain.
+2. **Nitrogen Dioxide (NO₂)** – Emitted by vehicles and industrial sources, contributes to smog.
+3. **Particulate Matter (PM10)** – Large airborne particles from dust and construction.
+4. **Particulate Matter (PM2.5)** – Smaller, more harmful particles that penetrate deep into lungs.
+5. **Ozone (O₃)** – Formed through chemical reactions in the atmosphere, causes breathing difficulties.
+6. **Carbon Monoxide (CO)** – Emitted from incomplete combustion, affects oxygen transport in blood.
 
-## Conclusion
-- While higher pollution levels often appear in heavily populated areas, direct correlation with population alone is weak.
-- Industrialization, fuel usage, and government regulations play a major role in air quality.
-- Future research could explore:
-  - Income levels vs. air pollution
-  - Population density vs. air quality
-  - Weather factors (temperature, humidity) affecting pollution
-  - Public transport availability vs. pollution levels
-  - Impact of environmental policies on pollution trends
+---
 
-## Repository and Presentation
-- **GitHub Repository:** [[Pollution Analysis](https://github.com/mrbowman86/pollution_analysis)]
-- **Presentation:** A professionally designed PowerPoint explaining the analysis, methodology, and conclusions.
+<a id="data-cleaning--processing"></a>
+## 🛠 Data Cleaning & Processing
+### Steps Taken:
+- Filtered dataset to include only the **top 1,000 most populated cities**.
+- Queried OpenWeather API for **pollution levels** in each city.
+- Handled missing values, ensuring data consistency.
+- Standardized measurement units for pollutants.
+- Merged city population data with pollution data.
 
-## Project Contributors
-This project was completed as part of a data analytics bootcamp by **Project 1 Group 3**. Our team consisted of Anna Howell, Caleb Schmitt, Diana Gibson, Kanchan Kumari, and Michael Bowman.
+![Data Processing](https://your-repo.com/images/data_processing.png)
 
-## Resources
-ChatGPT
+---
+
+<a id="visualizations"></a>
+## 📈 Visualizations
+Our project includes several key visualizations:
+
+1. **Scatter plots** of population vs. each pollutant.
+   ![Scatter Plot](https://your-repo.com/images/scatter_plot.png)
+2. **Heatmap** showing regional pollution levels.
+   ![Heatmap](https://your-repo.com/images/heatmap.png)
+3. **Top 10 most polluted cities per pollutant**.
+   ![Top Polluted Cities](https://your-repo.com/images/top_polluted.png)
+4. **Global distribution of pollution levels**.
+   ![Global Pollution](https://your-repo.com/images/global_pollution.png)
+
+🔗 **[Download Visualizations (PDF)](GLOBAL_AIR_POLLUTION_ANALYSIS.pptx)**
+
+---
+
+<a id="correlation-analysis"></a>
+## 📉 Correlation Analysis
+We computed correlation coefficients (R² values) to assess relationships between population and pollutants:
+
+![Correlation Analysis](https://your-repo.com/images/correlation_analysis.png)
+
+| Pollutant | R-Squared Value | Interpretation |
+|-----------|---------------|----------------|
+| SO₂ | 0.18 | Weak correlation |
+| NO₂ | 0.21 | Weak correlation |
+| PM10 | 0.12 | Very weak correlation |
+| PM2.5 | 0.14 | Very weak correlation |
+| O₃ | 0.08 | No significant correlation |
+| CO | 0.10 | Very weak correlation |
+
+### Key Findings:
+- We expected **higher population to result in higher pollution** but found **no strong correlation**.
+- Pollution levels may be more **influenced by industrial activity** rather than population size.
+- **PM2.5 and PM10** showed the strongest correlation, as expected, due to their similar sources.
+
+---
+
+<a id="conclusions"></a>
+## 🔍 Conclusions
+- **Population alone is not a strong indicator of pollution levels.**
+- Industrialization and energy consumption **play a more significant role** in pollution.
+- Future research should explore:
+  - **Population density vs. air quality**
+  - **Economic factors influencing pollution**
+  - **Climate variables affecting pollution levels**
+
+![Conclusions](https://your-repo.com/images/conclusions.png)
+
+---
+
+<a id="tools--technologies-used"></a>
+## 🛠 Tools & Technologies Used
+- **Python** (Data Analysis & Visualization)
+  - `pandas` (Data Processing)
+  - `matplotlib`, `seaborn`, `plotly` (Visualizations)
+  - `numpy`, `scipy.stats` (Statistical Analysis)
+  - `ipywidgets` (Interactive UI Elements)
+- **OpenWeather API** (Pollution Data)
+- **Kaggle Datasets** (Population Data)
+- **PowerPoint** (Report Compilation)
+- **ChatGPT** (Research & Report Writing)
+
+---
+
+<a id="team-members"></a>
+## 👥 Team Members
+- Anna Howell
+- Caleb Schmitt
+- Diana Gibson
+- Kanchan Kumari
+- Michael Bowman
+
+Thank you for exploring our findings! 🚀
