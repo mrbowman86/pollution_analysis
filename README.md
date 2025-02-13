@@ -17,7 +17,7 @@
 ## 📖 Project Overview
 This project examines the relationship between population density and pollution levels across the world's 1,000 most populated cities. Using data from the OpenWeather API and population datasets from Kaggle, we analyzed six major air pollutants to determine if a direct correlation exists between city population and pollution levels. 
 
-![Project Overview](https://your-repo.com/images/project_overview.png)
+https://github.com/mrbowman86/pollution_analysis
 
 ---
 
@@ -27,15 +27,11 @@ This project examines the relationship between population density and pollution 
 - **Kaggle City Population Dataset** - Provided population figures for global cities
 - **Scientific Literature & Reports** - Referenced to understand the effects of pollutants
 
-![Data Sources](https://your-repo.com/images/data_sources.png)
-
 ---
 
 <a id="pollutants-analyzed"></a>
 ## ☣️ Pollutants Analyzed
 The study focused on the following six pollutants:
-
-![Pollutants Analyzed](https://your-repo.com/images/pollutants.png)
 
 1. **Sulfur Dioxide (SO₂)** – From fossil fuel combustion, causes respiratory issues and acid rain.
 2. **Nitrogen Dioxide (NO₂)** – Emitted by vehicles and industrial sources, contributes to smog.
@@ -55,32 +51,30 @@ The study focused on the following six pollutants:
 - Standardized measurement units for pollutants.
 - Merged city population data with pollution data.
 
-![Data Processing](https://your-repo.com/images/data_processing.png)
-
 ---
 
 <a id="visualizations"></a>
 ## 📈 Visualizations
 Our project includes several key visualizations:
 
-1. **Scatter plots** of population vs. each pollutant.
-   ![Scatter Plot](https://your-repo.com/images/scatter_plot.png)
-2. **Heatmap** showing regional pollution levels.
-   ![Heatmap](https://your-repo.com/images/heatmap.png)
-3. **Top 10 most polluted cities per pollutant**.
-   ![Top Polluted Cities](https://your-repo.com/images/top_polluted.png)
-4. **Global distribution of pollution levels**.
-   ![Global Pollution](https://your-repo.com/images/global_pollution.png)
-
-🔗 **[Download Visualizations (PDF)](GLOBAL_AIR_POLLUTION_ANALYSIS.pptx)**
+1. **Scatter plots** showing the population vs. each pollutant.
+   [Scatter Plots](https://github.com/mrbowman86/pollution_analysis/blob/main/resources/Scatter_Plot_Visualizations.pdf)
+2. **Heatmaps** showing regional pollution levels.
+   [Heatmaps](https://github.com/mrbowman86/pollution_analysis/blob/main/resources/Heat_Map_Visualizations.pdf)
+3. **Bar Charts** showing the top 10 most/least polluted cities per pollutant.
+   [Bar Charts](https://github.com/mrbowman86/pollution_analysis/blob/main/resources/Bar_Chart_Visualizations.pdf)
+4. **Open Street Map** showing the top 1,000 populated cities and their pollution levels.
+   [Open Street Map](https://github.com/mrbowman86/pollution_analysis/blob/main/resources/City_Open_Street_Map.pdf)
+5. **Correlation Matrix** showing how each pollutant is related (or not) against another.
+   [Correlation Matrix](https://github.com/mrbowman86/pollution_analysis/blob/main/resources/Correlation_Matrix.pdf)
+6. **Powerpoint Presentation**.
+   [Powerpoint](GLOBAL_AIR_POLLUTION_ANALYSIS.pptx)   
 
 ---
 
 <a id="correlation-analysis"></a>
 ## 📉 Correlation Analysis
 We computed correlation coefficients (R² values) to assess relationships between population and pollutants:
-
-![Correlation Analysis](https://your-repo.com/images/correlation_analysis.png)
 
 | Pollutant | R-Squared Value | Interpretation |
 |-----------|---------------|----------------|
@@ -93,21 +87,22 @@ We computed correlation coefficients (R² values) to assess relationships betwee
 
 ### Key Findings:
 - We expected **higher population to result in higher pollution** but found **no strong correlation**.
-- Pollution levels may be more **influenced by industrial activity** rather than population size.
+- Pollution levels may be more **influenced by other factors** rather than population size.
 - **PM2.5 and PM10** showed the strongest correlation, as expected, due to their similar sources.
+- **O3 and CO** showed an inverse correlation, as expected, due to their similar sources.
 
 ---
 
 <a id="conclusions"></a>
 ## 🔍 Conclusions
 - **Population alone is not a strong indicator of pollution levels.**
-- Industrialization and energy consumption **play a more significant role** in pollution.
+- Industrialization and energy consumption could **play a more significant role** in pollution.
 - Future research should explore:
-  - **Population density vs. air quality**
+  - **All cities and population sizes versus pollution levels**
+  - **Population growth, analyzing how increased population in the same city impacts pollution levels**
   - **Economic factors influencing pollution**
   - **Climate variables affecting pollution levels**
-
-![Conclusions](https://your-repo.com/images/conclusions.png)
+  - **Environmental factors such as temerature, humidity, and altitude versus pollution levels**
 
 ---
 
