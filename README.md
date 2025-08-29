@@ -125,7 +125,7 @@ We computed correlation coefficients (R² values) to assess relationships betwee
 - Anna Howell
 - Caleb Schmitt
 - Diana Gibson
-- Kanchan Kumari
+- Kanchan Ratan
 - Michael Bowman
 
 Thank you for exploring our findings! 🚀
